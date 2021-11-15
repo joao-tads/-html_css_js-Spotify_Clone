@@ -12,6 +12,8 @@
   --base-color: black;
   --text-color: white;
   --menu-color: rgb(190, 190, 190);
+  --menu-active-color: rgb(80, 80, 80);
+  --menu-border-color: rgb(40, 40, 40);
 }
 /*========== BASE ==========*/
 html,
@@ -23,7 +25,7 @@ body {
 .sidebar {
   float: left;
   width: 15.625rem;
-  padding: 0.625rem 0.625rem;
+  padding: 0.625rem;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -32,5 +34,82 @@ body {
 
 .sidebar-wrapper {
   padding-bottom: 12.5rem;
+}
+
+.sidebar_menu {
+  margin: 1.25rem 0;
+  color: var(--menu-color);
+}
+
+.sidebar_logo img {
+  max-width: 15.625rem;
+  width: 100%;
+}
+
+.sidebar_menu a {
+  color: var(--menu-color);
+  text-decoration: none;
+  display: block;
+  padding: 0.625rem 0;
+}
+
+.sidebar_menu svg {
+  margin: 0 1.25rem;
+}
+
+.sidebar_menu a.sidebar_menu_active {
+  color: var(--text-color);
+  background-color: var(--menu-active-color);
+  border-radius: 5px;
+}
+
+.sidebar_menu_item {
+  margin-top: 0.75rem;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.sidebar_menu p.sidebar_menu_title {
+  color: var(--text-color);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.sidebar_menu_componente {
+  width: 1.875rem;
+  height: 1.875rem;
+  text-align: center;
+  line-height: 1.875rem;
+  display: inline-block;
+  color: var(--base-color);
+  font-weight: bold;
+  background-color: var(--text-color);
+}
+
+.sidebar_menu_item span {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 0.625rem;
+}
+
+.sidebar_menu_item img {
+  width: 1.875rem;
+  height: 1.875rem;
+  vertical-align: middle;
+}
+.sidebar_playlists {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--menu-border-color);
+}
+
+.sidebar_playlists a {
+  margin: 0.625rem 0;
+  display: block;
+  color: var(--menu-color);
+  text-decoration: none;
+}
+
+.sidebar_playlists a:hover {
+  color: var(--base-color);
 }
 /*==========  ==========*/
