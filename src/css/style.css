@@ -36,6 +36,9 @@
   --menu-border-color: rgb(40, 40, 40);
   --nav-color: #101010;
   --col-color: #171717;
+  --player-color: #181818;
+  --progress-color: #535353;
+  --progress-color-2: #1dac4f;
 }
 /*========== BASE ==========*/
 html,
@@ -52,9 +55,13 @@ body {
   width: 15rem;
   padding: 0.625rem;
   height: 92%;
-  overflow-y: hidden;
+  overflow-y: auto;
   overflow-x: hidden;
   background-color: var(--base-color);
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 1px;
 }
 
 .sidebar-wrapper {
@@ -209,4 +216,87 @@ body {
   padding: 0.7rem;
   padding-bottom: 2rem;
   text-align: left;
+}
+
+/*========== PLAYER ==========*/
+.player {
+  width: 100%;
+  padding: 1.875rem;
+  height: 8.125rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  border-top: 0.5px solid var(--menu-border-color);
+  background-color: var(--player-color);
+}
+
+.player_artist {
+  width: 20%;
+}
+
+.player_artist img {
+  max-width: 4.375rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.player_artist h3 {
+  display: inline-block;
+  color: var(--text-color);
+  font-weight: normal;
+  font-size: 20px;
+  vertical-align: middle;
+  margin-left: 0.625rem;
+}
+
+.player_artist h3 > span {
+  color: var(--menu-color);
+  font-size: 13px;
+}
+
+.player_control {
+  width: 70%;
+  text-align: center;
+}
+
+.player_control_button a {
+  color: var(--text-color);
+  margin: 8px 15px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.player_control_button a:hover {
+  color: var(--progress-color-2);
+}
+
+.player_control_progress {
+  width: 100%;
+  max-width: 37.5rem;
+  height: 0.4375rem;
+  margin-top: 1.25rem;
+  position: relative;
+  border-radius: 8px;
+  display: inline-block;
+  background-color: var(--progress-color);
+  cursor: pointer;
+}
+
+.player_control_button a.pp {
+  font-size: 30px;
+}
+
+.player_control_progress_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.4375rem;
+  border-radius: 8px;
+  background-color: var(--text-color);
+  transition: 0.3s;
+}
+
+.player_control_progress_2:hover {
+  background-color: var(--progress-color-2);
 }
