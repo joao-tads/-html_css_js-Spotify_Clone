@@ -301,6 +301,14 @@ body {
   background-color: var(--progress-color-2);
 }
 
+/*========== AUDIOPLAYER  ==========*/
+#audioPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+
 /*========== RESPONSIVE  ==========*/
 @media screen and (max-width: 1700px) {
   .main_col {
