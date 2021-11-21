@@ -300,3 +300,32 @@ body {
 .player_control_progress_2:hover {
   background-color: var(--progress-color-2);
 }
+
+/*========== RESPONSIVE  ==========*/
+@media screen and (max-width: 1700px) {
+  .main_col {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_col {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .sidebar,
+  .nav {
+    display: none;
+  }
+
+  .main_col,
+  .main {
+    width: 100%;
+  }
+
+  .main {
+    margin: 0;
+  }
+}
